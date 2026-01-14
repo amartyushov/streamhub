@@ -1,0 +1,11 @@
+.gradle/
+build/
+.idea/
+*.iml
+out/
+.DS_Store
+.env
+*.log
+application-local.yml
+docker/postgres/data/
+docker/kafka/data/
