@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":libs:events"))  // Kafka handles events
+    api(project(":libs:events"))  // Kafka handles events
 
     implementation(Libs.springKafka)
 

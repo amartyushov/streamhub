@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":libs:common"))  // Can use common utilities
+    api(project(":libs:common"))  // Can use common utilities
 
     // Annotations only
     compileOnly(Libs.lombok)

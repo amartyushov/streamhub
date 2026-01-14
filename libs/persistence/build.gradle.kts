@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":libs:domain"))  // Entities reference domain models
+    api(project(":libs:domain"))  // Entities reference domain models
 
     implementation(Libs.springBootData)
     implementation(Libs.postgresql)

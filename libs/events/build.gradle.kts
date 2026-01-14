@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":libs:domain"))  // Events reference domain models
+    api(project(":libs:common"))
 
 //    implementation(Libs.jackson)  // For serialization
 
