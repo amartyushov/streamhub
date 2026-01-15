@@ -1,4 +1,7 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
+    kotlin("jvm")
     `java-library`
     jacoco
 }
@@ -9,13 +12,17 @@ java {
     }
 }
 
-tasks.withType<JavaCompile> {
-    options.compilerArgs.addAll(listOf(
-        "--enable-preview",
-        "-Xlint:preview",
-        "-Xlint:unchecked",
-        "-parameters"
-    ))
+tasks.withType<KotlinCompile>().configureEach {
+    compilerOptions {
+        jvmTarget.set(
+            org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_25
+        )
+
+        freeCompilerArgs.addAll(
+            "-Xjvm-enable-preview",
+            "-Xjsr305=strict"
+        )
+    }
 }
 
 tasks.test {

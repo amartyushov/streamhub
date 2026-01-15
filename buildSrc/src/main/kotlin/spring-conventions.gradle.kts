@@ -1,5 +1,5 @@
 plugins {
-    id("java-conventions")
+    id("kotlin-conventions")
     id("org.springframework.boot")         // ← Версия из buildSrc/build.gradle.kts
     id("io.spring.dependency-management")  // ← Версия из buildSrc/build.gradle.kts
 }
